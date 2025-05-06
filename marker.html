@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AR Marker</title>
+  <style>
+    body {
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Link-Stil oben links */
+    .link-container {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 16px;
+      color: white;
+      z-index: 1;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      width: 70%;
+      max-width: 600px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Marker-Bild anzeigen -->
+  <img src="marker.png" alt="AR Marker" />
+
+  <!-- Link zur AR-Ansicht oben links -->
+  <div class="link-container">
+    <p><a href="index.html">Zur AR-Ansicht wechseln</a></p>
+  </div>
+</body>
+</html>

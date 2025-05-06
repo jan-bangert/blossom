@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AR-Blossom</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+  <style>
+    body { margin: 0; overflow: hidden; }
+    a-scene { width: 100vw; height: 100vh; }
+    .link-container {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 16px;
+      color: white;
+      z-index: 1;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <a-scene embedded arjs>
+    <!-- Marker -->
+    <a-marker type="pattern" url="marker.patt">
+
+      <!-- Aufrecht stehender Kirschblütenbaum -->
+      <a-image src="blossom.png" position="0 0 0" rotation="0 0 0" width="1.5" height="1.5"></a-image>
+
+      <!-- Viele kleine fallende Blätter -->
+      <a-image src="leave.png" position="-0.5 2.5 0" rotation="0 0 0" width="0.08" height="0.08"
+               animation="property: position; to: -0.5 0.5 0; dur: 4000; loop: true"></a-image>
+      <a-image src="leave.png" position="0.4 2.7 -0.3" rotation="0 0 0" width="0.08" height="0.08"
+               animation="property: position; to: 0.4 0.5 -0.3; dur: 4200; loop: true"></a-image>
+      <a-image src="leave.png" position="0 2.6 0.4" rotation="0 0 0" width="0.08" height="0.08"
+               animation="property: position; to: 0 0.5 0.4; dur: 4500; loop: true"></a-image>
+      <a-image src="leave.png" position="0.2 2.8 -0.5" rotation="0 0 0" width="0.08" height="0.08"
+               animation="property: position; to: 0.2 0.5 -0.5; dur: 4300; loop: true"></a-image>
+      <a-image src="leave.png" position="-0.3 2.9 0.3" rotation="0 0 0" width="0.08" height="0.08"
+               animation="property: position; to: -0.3 0.5 0.3; dur: 4700; loop: true"></a-image>
+      <a-image src="leave.png" position="0.6 2.6 0.1" rotation="0 0 0" width="0.08" height="0.08"
+               animation="property: position; to: 0.6 0.5 0.1; dur: 4100; loop: true"></a-image>
+      <a-image src="leave.png" position="-0.6 2.7 -0.2" rotation="0 0 0" width="0.08" height="0.08"
+               animation="property: position; to: -0.6 0.5 -0.2; dur: 4600; loop: true"></a-image>
+      <a-image src="leave.png" position="0.1 2.8 0.5" rotation="0 0 0" width="0.08" height="0.08"
+               animation="property: position; to: 0.1 0.5 0.5; dur: 4800; loop: true"></a-image>
+      <a-image src="leave.png" position="-0.2 2.6 -0.4" rotation="0 0 0" width="0.08" height="0.08"
+               animation="property: position; to: -0.2 0.5 -0.4; dur: 4400; loop: true"></a-image>
+      <a-image src="leave.png" position="0.5 2.9 -0.1" rotation="0 0 0" width="0.08" height="0.08"
+               animation="property: position; to: 0.5 0.5 -0.1; dur: 4900; loop: true"></a-image>
+      <a-image src="leave.png" position="-0.1 2.55 0.2" rotation="0 0 0" width="0.08" height="0.08"
+               animation="property: position; to: -0.1 0.5 0.2; dur: 4000; loop: true"></a-image>
+      <a-image src="leave.png" position="0.3 2.65 0.3" rotation="0 0 0" width="0.08" height="0.08"
+               animation="property: position; to: 0.3 0.5 0.3; dur: 4700; loop: true"></a-image>
+      <a-image src="leave.png" position="-0.4 2.75 -0.3" rotation="0 0 0" width="0.08" height="0.08"
+               animation="property: position; to: -0.4 0.5 -0.3; dur: 4300; loop: true"></a-image>
+      <a-image src="leave.png" position="0.2 2.85 0.1" rotation="0 0 0" width="0.08" height="0.08"
+               animation="property: position; to: 0.2 0.5 0.1; dur: 4900; loop: true"></a-image>
+      <a-image src="leave.png" position="-0.5 2.9 -0.4" rotation="0 0 0" width="0.08" height="0.08"
+               animation="property: position; to: -0.5 0.5 -0.4; dur: 4600; loop: true"></a-image>
+
+    </a-marker>
+
+    <!-- Kamera -->
+    <a-entity camera></a-entity>
+  </a-scene>
+
+  <!-- Link zum Marker -->
+  <div class="link-container">
+    <p><a href="marker.html">Zum Marker-Bild</a></p>
+  </div>
+</body>
+</html>
